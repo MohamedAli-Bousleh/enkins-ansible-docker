@@ -10,7 +10,7 @@ node {
       sh 'mvn package'
     }
     
-    def img = stage('Buildd') {
+    def img = stage('Build') {
       docker.build("$IMAGE",  '.')
     }
     
